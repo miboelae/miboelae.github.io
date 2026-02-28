@@ -9,5 +9,5 @@
   ex:interest "Playing guitar"^^xsd:string ;
   ex:interest "Fitness"^^xsd:string ;
   ex:addressLocality <https://www.wikidata.org/entity/Q985789> ;
-  ex:knows <https://gerwoud.github.io/#me> ;
+  ex:knows  <https://ceetto.github.io/#me>  ;
   ex:knows <https://arnedierick.github.io/#me> .
