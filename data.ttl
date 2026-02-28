@@ -1,7 +1,7 @@
 @prefix ex:   <https://miboelae.github.io/vocabulary#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
-<https://miboelae.github.io/#me>
+<https://miboelae.github.io/data.ttl#me>
   a ex:Student ;
   ex:fullName "Michaël Boelaert"^^xsd:string ;
   ex:studentId "02003771"^^xsd:string ;
