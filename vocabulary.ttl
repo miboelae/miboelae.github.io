@@ -1,0 +1,60 @@
+@prefix ex:   <https://miboelae.github.io/kg/vocab#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+#################################################################
+# Classes
+#################################################################
+
+ex:Person a rdfs:Class ;
+  rdfs:label "Person"@en ;
+  rdfs:comment "A human being described in this dataset."@en .
+
+ex:Student a rdfs:Class ;
+  rdfs:subClassOf ex:Person ;
+  rdfs:label "Student"@en ;
+  rdfs:comment "A person who is a student (e.g., at a university)."@en .
+
+#################################################################
+# Properties
+#################################################################
+
+ex:fullName a rdf:Property ;
+  rdfs:label "full name"@en ;
+  rdfs:comment "The full name of a person."@en ;
+  rdfs:domain ex:Person ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf foaf:name .
+
+ex:studentId a rdf:Property ;
+  rdfs:label "student ID"@en ;
+  rdfs:comment "A university-issued identifier for a student."@en ;
+  rdfs:domain ex:Student ;
+  rdfs:range xsd:string .
+
+ex:email a rdf:Property ;
+  rdfs:label "email"@en ;
+  rdfs:comment "An email address for contacting a person."@en ;
+  rdfs:domain ex:Person ;
+  rdfs:range xsd:string .
+
+ex:interest a rdf:Property ;
+  rdfs:label "interest"@en ;
+  rdfs:comment "A topic or activity a person is interested in."@en ;
+  rdfs:domain ex:Person ;
+  rdfs:range xsd:string .
+
+ex:addressLocality a rdf:Property ;
+  rdfs:label "address locality"@en ;
+  rdfs:comment "A locality linked using an IRI (e.g., a Wikidata entity) indicating where the person is based."@en ;
+  rdfs:domain ex:Person ;
+  rdfs:range rdfs:Resource .
+
+ex:knows a rdf:Property ;
+  rdfs:label "knows"@en ;
+  rdfs:comment "Relates a person to another person they know."@en ;
+  rdfs:domain ex:Person ;
+  rdfs:range ex:Person ;
+  rdfs:subPropertyOf foaf:knows .
