@@ -1,0 +1,13 @@
+@prefix ex:   <https://miboelae.github.io/vocabulary#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+<https://miboelae.github.io/#me>
+  a ex:Student ;
+  ex:fullName "Michaël Boelaert"^^xsd:string ;
+  ex:studentId "02003771"^^xsd:string ;
+  ex:email "michael.boelaert@ugent.be"^^xsd:string ;
+  ex:interest "Playing guitar"^^xsd:string ;
+  ex:interest "Fitness"^^xsd:string ;
+  ex:addressLocality <https://www.wikidata.org/entity/Q985789> ;
+  ex:knows <https://gerwoud.github.io/#me> ;
+  ex:knows <https://arnedierick.github.io/#me> .
