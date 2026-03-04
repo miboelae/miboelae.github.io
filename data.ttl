@@ -1,4 +1,4 @@
-@prefix ex:   <https://miboelae.github.io/vocabulary#> .
+@prefix ex:   <https://miboelae.github.io/vocabulary.ttl#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
 <https://miboelae.github.io/data.ttl#me>
