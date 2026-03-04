@@ -1,12 +1,10 @@
-@prefix ex:   <https://miboelae.github.io/vocabulary#> .
+@prefix ex:   <https://miboelae.github.io/vocabulary.ttl#> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
-#################################################################
 # Classes
-#################################################################
 
 ex:Person a rdfs:Class ;
   rdfs:label "Person"@en ;
@@ -17,9 +15,7 @@ ex:Student a rdfs:Class ;
   rdfs:label "Student"@en ;
   rdfs:comment "A person who is a student (e.g., at a university)."@en .
 
-#################################################################
 # Properties
-#################################################################
 
 ex:fullName a rdf:Property ;
   rdfs:label "full name"@en ;
