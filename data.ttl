@@ -1,7 +1,9 @@
 @prefix ex:   <https://miboelae.github.io/vocabulary.ttl#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix data: <https://miboelae.github.io/data.ttl#> .
 
-<https://miboelae.github.io/data.ttl#me>
+data:me
   a ex:CourseParticipant ;
   ex:fullName "Michaël Boelaert"^^xsd:string ;
   ex:studentId "02003771"^^xsd:string ;
@@ -9,10 +11,33 @@
   ex:interest "Playing guitar"^^xsd:string ;
   ex:interest "Fitness"^^xsd:string ;
   ex:addressLocality <https://www.wikidata.org/entity/Q985789> ;
-  ex:participantOf ex:KnowledgeGraphs ;
+  ex:participantOf data:KnowledgeGraphs ;
   ex:knows <https://ceetto.github.io/data.ttl#me> ;
   ex:knows <https://arnedierick.github.io/data.ttl#me> .
 
-ex:KnowledgeGraphs
+data:KnowledgeGraphs
   a ex:Course ;
   ex:courseName "Knowledge Graphs"^^xsd:string .
+
+data:oldHighSchoolAalst a ex:Place ;
+    foaf:name "Sint-Maarteninstituut in Aalst" .
+
+data:vorstNationaal a ex:Place ;
+    foaf:name "Vorst Nationaal" .
+
+data:unknownPhotographer a foaf:Person ;
+    foaf:name "Unknown photographer" .
+
+data:afterworkPhoto a ex:Photograph ;
+    ex:title "Me at an afterwork party in Aalst" ;
+    ex:description "A photograph of me alone at an afterwork party held at my old high school in Aalst." ;
+    ex:creator data:unknownPhotographer ;
+    ex:depicts data:me ;
+    ex:takenAt data:oldHighSchoolAalst .
+
+data:macklemoreConcertPhoto a ex:Photograph ;
+    ex:title "Me in the crowd at a Macklemore concert" ;
+    ex:description "A photograph of me standing in a large crowd during a Macklemore concert at Vorst Nationaal. I am wearing a red T-shirt and am easy to spot in the audience." ;
+    ex:creator data:unknownPhotographer ;
+    ex:depicts data:me ;
+    ex:takenAt data:vorstNationaal .
