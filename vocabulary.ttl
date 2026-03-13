@@ -97,14 +97,22 @@ ex:description a rdf:Property ;
 ex:creator a rdf:Property ;
     rdfs:label "creator" ;
     rdfs:domain ex:Photograph ;
-    rdfs:range rdfs:Resource .
+    rdfs:range ex:Person .
 
 ex:depicts a rdf:Property ;
     rdfs:label "depicts" ;
     rdfs:domain ex:Photograph ;
-    rdfs:range rdfs:Resource .
+    rdfs:range ex:Person .
 
 ex:takenAt a rdf:Property ;
     rdfs:label "taken at" ;
     rdfs:domain ex:Photograph ;
     rdfs:range ex:Place .
+
+ex:Person rdfs:subClassOf foaf:Person .
+ex:Photograph rdfs:subClassOf foaf:Image .
+
+ex:fullName rdfs:subPropertyOf foaf:name .
+ex:knows rdfs:subPropertyOf foaf:knows .
+ex:depicts rdfs:subPropertyOf foaf:depicts .
+ex:creator rdfs:subPropertyOf foaf:maker .
