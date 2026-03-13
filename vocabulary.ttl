@@ -75,3 +75,36 @@ ex:courseName a rdf:Property ;
   rdfs:comment "The name of a course."@en ;
   rdfs:domain ex:Course ;
   rdfs:range xsd:string .
+
+# Photograph
+
+ex:Photograph a rdfs:Class ;
+    rdfs:label "Photograph" .
+
+ex:Place a rdfs:Class ;
+    rdfs:label "Place" .
+
+ex:title a rdf:Property ;
+    rdfs:label "title" ;
+    rdfs:domain ex:Photograph ;
+    rdfs:range rdfs:Literal .
+
+ex:description a rdf:Property ;
+    rdfs:label "description" ;
+    rdfs:domain ex:Photograph ;
+    rdfs:range rdfs:Literal .
+
+ex:creator a rdf:Property ;
+    rdfs:label "creator" ;
+    rdfs:domain ex:Photograph ;
+    rdfs:range rdfs:Resource .
+
+ex:depicts a rdf:Property ;
+    rdfs:label "depicts" ;
+    rdfs:domain ex:Photograph ;
+    rdfs:range rdfs:Resource .
+
+ex:takenAt a rdf:Property ;
+    rdfs:label "taken at" ;
+    rdfs:domain ex:Photograph ;
+    rdfs:range ex:Place .
