@@ -28,14 +28,14 @@ data:vorstNationaal a ex:Place ;
 data:unknownPhotographer a foaf:Person ;
     foaf:name "Unknown photographer" .
 
-data:afterworkPhoto a ex:Photograph ;
+<https://miboelae.github.io/profielfoto.jpg> a ex:Photograph ;
     ex:title "Me at an afterwork party in Aalst" ;
     ex:description "A photograph of me alone at an afterwork party held at my old high school in Aalst." ;
     ex:creator data:unknownPhotographer ;
     ex:depicts data:me ;
     ex:takenAt data:oldHighSchoolAalst .
 
-data:macklemoreConcertPhoto a ex:Photograph ;
+<https://miboelae.github.io/macklemore.jpg> a ex:Photograph ;
     ex:title "Me in the crowd at a Macklemore concert" ;
     ex:description "A photograph of me standing in a large crowd during a Macklemore concert at Vorst Nationaal. I am wearing a red T-shirt and am easy to spot in the audience." ;
     ex:creator data:unknownPhotographer ;
